@@ -1,94 +1,71 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>birthday</title>
-    <meta charset="UTF-8" />
-    <script src="triangles.js"></script>
-    <style>
-  .container{
-       background-color:lavender;
-       text-align: center;
-       margin-top: 10vh;
-       margin-left: 6rem;
-       margin-right: 6rem;
-       margin-bottom: 10vh;
-       color:1px solid black;
-       padding-top: 10px;
-       padding-bottom: 30px;
-      
-      }
-      button{
-        border: 1px solid black;
-        padding: 3px;
-        font-weight: bolder;
-        border-radius: 5px;
-
-      }
-      input{
-        margin: 1rem;
-      }
-     
-    </style>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triangles app</title>
+    <link rel="stylesheet" href="style.css">
   </head>
-
   <body>
-    <div class="container">
+    <nav class="navigation-container">
+      <ul class="list-non-bullet nav-pills">
+          <li class="list-item-inline">
+              <a class="link link-active"
+              href="index.html">quiz</a>
+           </li>
+          <li class="list-item-inline">
+              <a class="link" href="hypoteneous.html">
+              hypotenuous</a>
+           </li>
+           <li class="list-item-inline">
+               <a class="link" href="area.html">
+               area</a>
+           </li>
+           <li class="list-item-inline">
+            <a class="link" href="istriangle.html">
+            Istriangle</a>
+        </li>
+      </ul>
 
+  </nav>
+    
+    <div class="container">
+     
     <h1>do you know aboout <span style="color: 
       #4C1D95;">Triangles?</span></h1>
     <hr />
     <h2>A simple quiz !</h2><br>
-    <h3>1.what is the formula for area of triangle</h3>
-       <small>1. 0.5*base*height <br>
-          2.length*breadth <br>
-          3.base+height <br></small>
-      your option: <input type="text" id="qOne">
-
-      <h3>2.how many acute angles must an acute triangles have?</h3>
-       <small>1. 2<br>
-          2. 3 <br> 
-          3. 4 <br>
-        </small>
-      your option: <input type="text" id="qTwo">
-
-      <h3>3.what is right angled triangle</h3>
-       <small>1. triangle with 90 deg <br>
-          2.triangle with 180 deg  <br>
-          3.triangle with 60 deg  <br></small>
-      your option: <input type="text" id="qThree">
-      <h2 id="score" style="color: 
-      #4C1D95;">Submit to check score</h2>
-      <button onclick="getScore();">submit</button>
+    <form name="formvalue">
+    <div class="question-container">
+      <p>
+        What is the third angle for the triangle where angle1 = 45° and
+        angle2 = 45°?
+      </p>
+      <label><input type="radio" name="question1" value="45°" />45°</label>
+      <label><input type="radio" name="question1" value="90°" />90°</label>
+      <label><input type="radio" name="question1" value="60°" />60°</label>
+    </div>
+    <div class="question-container">
+      <p>
+        What is the third angle for the triangle where angle1 = 45° and
+        angle2 = 45°?
+      </p>
+      <label>
+        <input type="radio" name="question2" value="obtuse" />obtuse</label>
+      <label><input type="radio" name="question2" value="acute" />acute</label>
+      <label><input type="radio" name="question2" value="right angled" />rightangled</label>
+      
+    </div> 
+    </form>
+      <button id="quizScore">Get score</button>
+      <h2 id="quizOutput"></h2>
+  <br>
+  <br>    
  <hr>
 
- Enter base :<input type="text" id="base">
- Enter height:<input type="text" id="height"> <br><br>
- <button onclick="getHypo();">calculate </button>
- <h2 id="area" style="color: 
- #4C1D95;"></h2>
-<br><br> <hr>
-
- <h3>Enter angles of triangle</h3>
- angle1:<input type="text" id="angleOne">
- angle2:<input type="text" id="angleTwo">
- angle3:<input type="text" id="angleThree">
- <br><br>
- <button id="angleButton" onclick="isTriangle();"> Check </button>
- 
- <h2 id="isTriangle" style="color: 
- #4C1D95;"></h2>
  </div>
  <br><br><hr>
-
-
-
-
-
-
-    <!-- enter date of birth:<input type="text" id="date"/> enter lucky number
-       <input type="text" id="lucky" />
-    <div id="output-div"></div>
-    <button onclick="isLucky();">submit</button>
-  </body>
-  <script src="birth.js"></script> -->
+ </body>
+ <script src="triangles.js"></script>
 </html>

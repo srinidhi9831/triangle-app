@@ -1,39 +1,21 @@
-function getScore(){
-    var score=0;
-    var qOne=document.getElementById("qOne").value;
-    var qTwo=document.getElementById("qTwo").value;
-    var qThree=document.getElementById("qThree").value;
-    //if(qone=='1'){
-        //document.getElementById("output-div").innerText=
-    //}
-    if(qOne=='1')
-        score++;
-    if(qTwo=='2')
-       score++;
-    if(qThree=='1')
-        score++;
+const answers=['90°','right angled'];
+output=document.querySelector("#quizOutput")
+quizButton = document.querySelector("#quizScore");
 
-  document.getElementById("score").innerText="your score: "+ score;  
-}
+quizButton.addEventListener("click",getScore);
 
-function getHypo(){ 
-    var base=parseInt(document.getElementById("base").value);
-    var height=parseInt(document.getElementById("height").value);
-    var hypo= Math.sqrt(Math.pow(base,2)+Math.pow(height,2));
-    var area = 0.5*base*height;
-    document.getElementById("area").innerText="hypoteneous:"+hypo+"\narea:"+area;
-    
-}
 
-function isTriangle(){
-    var angleOne=parseInt(document.getElementById("angleOne").value);
-    var angleTwo=parseInt(document.getElementById("angleTwo").value);
-    var angleThree=parseInt(document.getElementById("angleThree").value);
-    console.log((angleOne+angleTwo+angleThree))
-    if((angleOne+angleTwo+angleThree)===180){
-        document.getElementById("isTriangle").innerText="Angle forms a triangle";
-   }
-   else{
-    document.getElementById("isTriangle").innerText="oops angle does not forms a triangle!!";
-   }
-}
+function getScore() {
+ 
+    const Results =  new FormData(formvalue);
+
+    let score = 0,
+      index = 0;
+    for (let value of Results.values()) {
+      if (value === answers[index]) {
+        score = score + 1;
+      }
+      index++;
+    }
+    output.innerText ="The score is " + score;
+  }
