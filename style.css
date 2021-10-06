@@ -9,8 +9,9 @@
 a{
     text-decoration: none;
     color: white ;
-    font-size: larger;
-    letter-spacing: 1px;
+    font-size:20px;
+    display: inline;
+    
 }
  
  .list-item-inline{
@@ -60,8 +61,38 @@ a{
      margin: 1rem;
      border: 1px solid black;
    }
-   .question-container{
+   /* .question-container{
      margin: 1rem;
      padding: 1rem;
-   }
+   } */
    
+   .footer{
+    background-color:   
+    #111827;
+    padding: 2rem 1rem;
+    text-align: center;
+    color: white;
+    border-bottom-right-radius:1rem;
+    margin-top: 25vh;
+}
+
+.footer .link{
+    color: white;
+    text-decoration: none;
+    
+}
+
+.footer ul{
+    padding-inline-start: 0px;
+}
+.footer li{
+  display: inline;
+  padding: 1rem;
+  margin: 1rem;
+  
+}
+.footer-header{
+  margin: 1rem;
+  padding: 1rem;
+ 
+}
