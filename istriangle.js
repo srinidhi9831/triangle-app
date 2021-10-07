@@ -26,6 +26,14 @@ function validate(){
         alert("please fill out all the angles");
           return false;
     }
+    else if(base.value<0 || height.value<0){
+        alert("please input number greater than 0");
+        return false
+    }
+    else if(isNaN(base.value) || isNaN(height.value)){
+        alert("please input numbers only");
+        return false;
+    }
     else{
         return true;
     }
