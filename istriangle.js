@@ -1,8 +1,8 @@
 var buttonIsTriangle=document.querySelector("#isTriangleButton");
-  var outputIsTriangle=document.querySelector("#outputIsTriangle");
-  var angleOne=document.querySelector("#angleOne");
-  var angleTwo=document.querySelector("#angleTwo");
-  var angleThree=document.querySelector("#angleThree");
+var outputIsTriangle=document.querySelector("#outputIsTriangle");
+var angleOne=document.querySelector("#angleOne");
+var angleTwo=document.querySelector("#angleTwo");
+var angleThree=document.querySelector("#angleThree");
 
   buttonIsTriangle.addEventListener("click",eventHandler);
 
@@ -26,11 +26,11 @@ function validate(){
         alert("please fill out all the angles");
           return false;
     }
-    else if(base.value<0 || height.value<0){
+    else if(angleOne.value<=0 || angleTwo.value<=0 || angleThree.value<=0){
         alert("please input number greater than 0");
         return false
     }
-    else if(isNaN(base.value) || isNaN(height.value)){
+    else if(isNaN(angleOne.value) || isNaN(angleTwo.value) || isNaN(angleThree.value)){
         alert("please input numbers only");
         return false;
     }
